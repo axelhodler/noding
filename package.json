@@ -6,7 +6,9 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "karma": "^0.12.6"
+  },
   "devDependencies": {
     "mocha": "~1.18.2"
   },
