@@ -1,0 +1,19 @@
+{
+  "name": "noding",
+  "version": "0.0.0",
+  "description": "node playground",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.18.2"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
