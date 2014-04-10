@@ -2,7 +2,7 @@
   "name": "noding",
   "version": "0.0.0",
   "description": "node playground",
-  "main": "server.js",
+  "main": "main.js",
   "directories": {
     "test": "tests"
   },
