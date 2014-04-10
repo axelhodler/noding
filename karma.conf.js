@@ -1,6 +1,3 @@
-// Karma configuration
-// Generated on Thu Apr 10 2014 03:35:18 GMT+0200 (CEST)
-
 module.exports = function(config) {
   config.set({
 
