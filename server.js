@@ -1,10 +1,10 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-this.server = http.createServer(function(req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('');
+app.get('/', function(req, res) {
+  res.send('');
 });
 
 exports.listen = function() {
-  this.server.listen(1337, '127.0.0.1');
+  app.listen(1337);
 };
