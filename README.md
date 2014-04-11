@@ -5,5 +5,6 @@ basic node application to go through some node concepts
 create a static html page that is served by the node server
 
 ## Testing
+Run tests via [mocha](http://visionmedia.github.io/mocha/)
 
-    mocha tests/test_server.js
+    mocha tests
