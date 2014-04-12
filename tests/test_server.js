@@ -4,6 +4,8 @@ var http = require('http');
 
 var assert = require('assert');
 
+var fs = require('fs');
+
 describe('server functionality', function() {
   describe('server works', function() {
     server.listen();
@@ -14,13 +16,15 @@ describe('server functionality', function() {
     });
 
     it('should return the static index.html file', function() {
+      content = fs.readFileSync('index.html');
+
       http.get('http://127.0.0.1:1337', function(res) {
         var body = '';
         res.on('data', function(chunk) {
           body += chunk;
         });
         res.on('end', function() {
-          assert.equal('hello', body);
+          assert.equal(content, body);
         });
       });
     });
