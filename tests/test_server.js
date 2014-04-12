@@ -1,30 +1,29 @@
 var server = require('../server.js');
-
 var http = require('http');
-
 var assert = require('assert');
-
 var fs = require('fs');
 
 describe('server functionality', function() {
-  describe('server works', function() {
+  url = 'http://localhost:1337';
+
+  describe('query on index route', function() {
     server.listen();
     it('should respond with status code 200', function() {
-      http.get('http://127.0.0.1:1337', function(res) {
+      http.get(url, function(res) {
         assert.equal(200, res.statusCode);
       });
     });
 
     it('should return the static index.html file', function() {
-      content = fs.readFileSync('index.html');
+      readContent = fs.readFileSync('index.html');
 
-      http.get('http://127.0.0.1:1337', function(res) {
-        var body = '';
+      http.get(url, function(res) {
+        body = '';
         res.on('data', function(chunk) {
           body += chunk;
         });
         res.on('end', function() {
-          assert.equal(content, body);
+          assert.equal(readContent, body);
         });
       });
     });
